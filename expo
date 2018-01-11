@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+
+# by jaggz.h who is at gmail.com
+# 2018-01-11
+
+# Converts Expo Snack web URLS (https://) to the exp:// format
+# and copies the URL to the clipboard, using X11's xsel command,
+# which allows the Expo client, in the emulator, to pick it up.
+
+# Expo scripts for working with Expo snack URLs and QR Codes
+# for use with the emulator.
+
+# This script: expo
+#
+# NOTE: Make sure you have clipboard sharing enabled in
+#       The Emulator -> ... -> Settings -> Clipboard sharing
+#
+# Example input: https://snack.expo.io/HJVEgOugW
+#      Produces: exp://expo.io/@snack/H1cnedhBW
+# Example registered user input: (This doesn't work yet)
+#                https://snack.expo.io/@jaggzh/slider-example
+#      Produces: exp://expo.io/@jaggzh/slider-example
+
+my $url = get_url_from_wherever();
+print STDERR "Provided URL: $url\n";
+my $uri = get_uri_from_url($url);
+my $nurl = "exp://expo.io$uri";
+print STDERR "    Expo URL: $nurl\n";
+print $nurl, "\n";
+#open($xsel, "|-", "xsel -i") || die "Can't open pipe to xsel -ib: $!";
+open($xsel, "|-", "xsel -ib") || die "Can't open pipe to xsel -i: $!";
+print $xsel $nurl, "\n";
+close $xsel;
+print STDERR "Copied to clipboard.\n";
+
+sub get_uri_from_url {
+	my $url = shift;
+	my $uri;
+	if ($url =~ /@/) {
+		print STDERR "    URL Type: User\n";
+		($uri) = ($url =~ m|(/@.*)$|);
+	} else {
+		print STDERR "    URL Type: Public\n";
+		my ($code) = ($url =~ m|/([^/]+)$|);
+		$uri = "/\@snack/$code";
+	}
+	$uri;
+}
+sub get_url_from_wherever {
+	if ($#ARGV<0) {
+		undef $/;
+		$url = <STDIN>;
+	} else { 
+		$url = shift @ARGV;
+	}
+	$url =~ s/^\s+//;
+	$url =~ s/\s+$//;
+	$url;
+}

@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# by jaggz.h who is at gmail.com
+# 2018-01-11
+
+# Examines the whole screen for a QR code (the one in the browser!)
+# Gets the URL from the QR code,
+# Converts it to an Expo app URL,
+# And copies it to the clipboard for Expo, in the emulator,
+#  to pick up in its main screen.
+#
+# If found, the QR Code will contain, for example:
+#   exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz
+# Expo app wants:
+#   exp://expo.io/@snack/Skf4bLBNz
+
+# Expo scripts for working with Expo snack URLs and QR Codes
+# for use with the emulator.
+
+# This script depends on:
+#  ImageMagick's "import" commandline utility (to capture the desktop)
+#   You may change the "import -window root ..." command to your own screen
+#   capture utility
+#  zbar-tools' "zbarimg" utility
+#   If you have another utility to scan an image for QR codes, be my guest
+
+# This script: expoqr
+#
+# NOTE: Make sure you have clipboard sharing enabled in
+#       The Emulator -> ... -> Settings -> Clipboard sharing
+#
+imgtmp="/tmp/expoqr-screencap-$PPID.png"
+umask=0066                        # Don't let others read
+echo "Storing temp snapshot to: $imgtmp" >&2
+import -window root "$imgtmp"
+output=`zbarimg "$imgtmp"`
+printf 'Output of zbarimg: %s\n' "$output" >&2
+if [[ "$output" != "QR-Code:"* ]]; then
+	echo "Failure reading barcode from screenshot at $imgtmp" >&2
+	rm "$imgtmp"
+	exit 1
+fi
+# QR-Code found: QR-Code:exp://expo.io/@jaggzh/slider-example+Byoef7N4G
+qrcode=${output#QR-Code:}
+printf 'QR-Code found: \033[33;1m%s\033[0m\n' "$qrcode" >&2
+if [[ "$qrcode" = *@snack/* ]]; then
+	printf '     URL Type: \033[37;1m@snack\033[0m\n' >&2
+	url="$qrcode"                 # exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz
+	url="${url%+*}"               # exp://expo.io/@snack/Skf4bLBNz
+	#         Final goal should be: exp://expo.io/@snack/Skf4bLBNz
+else
+	printf '     URL Type: \033[37;1mUnknown. This may fail.\033[0m\n' >&2
+	printf 'Note: \033[37;1mURL does not contain "@snack"\033[0m\n' >&2
+	printf '      \033[37;1mExpected: \033[33;1mexp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz\033[0m\n' >&2
+	printf '      \033[37;1mWhereby we would produced produce:\033[0m\n' >&2
+	printf '      \033[33;1mexp://expo.io/@snack/Skf4bLBNz\033[0m\n' >&2
+	url="$qrcode"
+fi
+printf 'Final URL:     \033[33;1m%s\033[0m\n' "$url" >&2
+
+printf '\033[37;1mCopying to clipboard...\033[0m\n'
+printf "%s" "$url" | xsel -ib
+echo "Removing temp snapshot from: $imgtmp" >&2
+rm "$imgtmp"
