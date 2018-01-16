@@ -52,7 +52,7 @@ else
 	printf '     URL Type: \033[37;1mUnknown. This may fail.\033[0m\n' >&2
 	printf 'Note: \033[37;1mURL does not contain "@snack"\033[0m\n' >&2
 	printf '      \033[37;1mExpected: \033[33;1mexp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz\033[0m\n' >&2
-	printf '      \033[37;1mWhereby we would produced produce:\033[0m\n' >&2
+	printf '      \033[37;1mWhereby we would produce:\033[0m\n' >&2
 	printf '      \033[33;1mexp://expo.io/@snack/Skf4bLBNz\033[0m\n' >&2
 	url="$qrcode"
 fi
