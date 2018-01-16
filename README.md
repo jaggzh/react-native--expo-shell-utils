@@ -34,7 +34,7 @@ Converts it to an Expo app URL,<br />
 And copies it to the clipboard for Expo, in the emulator,</br />
  to pick up in its main screen.
 
-## To run:
+### To run:
 
 * Have QR code visible on screen (in browser probably)
 * Run: `expoqr`
