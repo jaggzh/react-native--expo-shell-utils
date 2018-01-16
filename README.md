@@ -4,7 +4,9 @@ by jaggz.h who is at gmail.co<br />
 2018-01-11
 
 ## Currently two scripts are included...
+
 ---
+
 # expo
 Converts Expo Snack web URLS (https://) to the exp:// format
 and copies the URL to the clipboard, using X11's xsel command,
@@ -19,8 +21,8 @@ NOTE: Make sure you have clipboard sharing enabled in
 Example: `expo https://snack.expo.io/HJVEgOugW`<br />
 Produces: `exp://expo.io/@snack/H1cnedhBW`
 
-Example registered user input... (This doesn't work yet)<br />
- `https://snack.expo.io/@jaggzh/slider-example`<br />
+Example registered user input (this may not work yet):<br />
+ `expo https://snack.expo.io/@jaggzh/slider-example`<br />
 Produces: `exp://expo.io/@jaggzh/slider-example`
 
 ---
