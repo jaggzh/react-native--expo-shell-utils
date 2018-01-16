@@ -1,4 +1,5 @@
-# react-native--expo-shell-utils
+# `react-native--expo-shell-utils`
+
 React Native/Expo: A collection of command line scripts for working with QR codes, the browser, clipboard, emulator, etc.<br />
 by jaggz.h who is at gmail.co<br />
 2018-01-11
