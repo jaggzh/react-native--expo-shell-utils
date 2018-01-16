@@ -25,9 +25,8 @@ Expo scripts for working with Expo snack URLs and QR Codes
 for use with the emulator.
 
 *NOTE: Make sure you have clipboard sharing enabled in
-      The Emulator -> ... -> Settings -> Clipboard sharing*
-
-*NOTE: My emulator loses this function, and I must toggle the
+      The Emulator -> ... -> Settings -> Clipboard sharing<br />
+My emulator loses this function, and I must toggle the
 Clipboard sharing option off and back on to get it working again.*
 
 Example: `expo https://snack.expo.io/HJVEgOugW`<br />
