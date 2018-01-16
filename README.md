@@ -36,8 +36,8 @@ And copies it to the clipboard for Expo, in the emulator,</br />
 
 ### To run:
 
-* Have QR code visible on screen (in browser probably)
-* Run: `expoqr`
+1. Have QR code visible on screen (in browser probably)
+2. Run: `expoqr`
 
 If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
