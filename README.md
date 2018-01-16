@@ -31,12 +31,17 @@ Produces: `exp://expo.io/@jaggzh/slider-example`
 Examines the whole screen for a QR code (the one in the browser!)<br />
 Gets the URL from the QR code,<br />
 Converts it to an Expo app URL,<br />
-And copies it to the clipboard for Expo, in the emulator,<br />
+And copies it to the clipboard for Expo, in the emulator,</br />
  to pick up in its main screen.
 
-If found, the QR Code will contain, for example:<br />
+## To run:
+
+* Have QR code visible on screen (in browser probably)
+* Run: `expoqr`
+
+If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
-Expo app wants:<br />
+`expoqr` places in the clipboard what Expo app craves:<br />
   `exp://expo.io/@snack/Skf4bLBNz`
 
 This script depends on...<br />
