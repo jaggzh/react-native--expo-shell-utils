@@ -27,6 +27,9 @@ for use with the emulator.
 *NOTE: Make sure you have clipboard sharing enabled in
       The Emulator -> ... -> Settings -> Clipboard sharing*
 
+*NOTE: My emulator loses this function, and I must toggle the
+Clipboard sharing option off and back on to get it working again.*
+
 Example: `expo https://snack.expo.io/HJVEgOugW`<br />
 Produces: `exp://expo.io/@snack/H1cnedhBW`
 
@@ -47,7 +50,9 @@ And copies it to the clipboard for Expo, in the emulator,</br />
 
 1. Have QR code visible on screen (in browser probably)
 2. *Make sure you have clipboard sharing enabled in
-      The Emulator -> ... -> Settings -> Clipboard sharing*
+      The Emulator -> ... -> Settings -> Clipboard sharing*.<br />
+	  If Expo doesn't pick up the URL, you might need to toggle the setting
+	  off and back on again. I don't know why it breaks.
 3. Run: `expoqr`
 
 If found, the QR Code from Expo's snacks will contain, for example:<br />
