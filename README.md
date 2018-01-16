@@ -40,9 +40,11 @@ Produces: `exp://expo.io/@jaggzh/slider-example`
 
 # expoqr
 Examines the whole screen for a QR code (the one in the browser!)<br />
-Gets the URL from the QR code,<br />
-Converts it to an Expo app URL,<br />
-And copies it to the clipboard for Expo, in the emulator,</br />
+*(See example screencapture below (taken from an Expo github issue))*
+
+1. Gets the URL from the QR code,<br />
+2. Converts it to an Expo app URL,<br />
+3. ...And copies it to the clipboard for Expo, in the emulator,
  to pick up in its main screen.
 
 ### To run:
@@ -58,6 +60,9 @@ If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
 Then, then clipboard will have what the Expo app craves:<br />
   `exp://expo.io/@snack/Skf4bLBNz` will be placed in the clipboard (currently uses xsel -ib, so it only works in un\*x/X11)
+
+### Example screen capture:
+![Screenshot of expoqr](example/ss.gif)
 
 ### This script depends on:<br />
 * ImageMagick's "`import`" commandline utility (to capture the desktop)<br />
