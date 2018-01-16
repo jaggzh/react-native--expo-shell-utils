@@ -42,8 +42,9 @@ And copies it to the clipboard for Expo, in the emulator,</br />
 
 If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
-`expoqr` places in the clipboard what Expo app craves:<br />
-  `exp://expo.io/@snack/Skf4bLBNz`
+Then:<br />
+`expoqr` has what Expo app craves::<br />
+  `exp://expo.io/@snack/Skf4bLBNz` will be placed in the clipboard (currently uses xsel -ib, so it only works in un\*x/X11)
 
 This script depends on:<br />
  ImageMagick's "import" commandline utility (to capture the desktop)<br />
