@@ -22,7 +22,9 @@ Produces: `exp://expo.io/@snack/H1cnedhBW`
 Example registered user input... (This doesn't work yet)<br />
  `https://snack.expo.io/@jaggzh/slider-example`<br />
 Produces: `exp://expo.io/@jaggzh/slider-example`
+
 ---
+
 # expoqr
 Examines the whole screen for a QR code (the one in the browser!)<br />
 Gets the URL from the QR code,<br />
@@ -31,7 +33,7 @@ And copies it to the clipboard for Expo, in the emulator,<br />
  to pick up in its main screen.
 
 If found, the QR Code will contain, for example:<br />
-  `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`
+  `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
 Expo app wants:<br />
   `exp://expo.io/@snack/Skf4bLBNz`
 
