@@ -1,16 +1,18 @@
 #!/usr/bin/perl
 
+# Expo scripts for working with Expo snack URLs and QR Codes
+# for use with the emulator.
 # by jaggz.h who is at gmail.com
 # 2018-01-11
 
+# This script: expo
+#
 # Converts Expo Snack web URLS (https://) to the exp:// format
 # and copies the URL to the clipboard, using X11's xsel command,
 # which allows the Expo client, in the emulator, to pick it up.
-
+#
 # Expo scripts for working with Expo snack URLs and QR Codes
 # for use with the emulator.
-
-# This script: expo
 #
 # NOTE: Make sure you have clipboard sharing enabled in
 #       The Emulator -> ... -> Settings -> Clipboard sharing

@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# Expo scripts for working with Expo snack URLs and QR Codes
+# for use with the emulator.
 # by jaggz.h who is at gmail.com
 # 2018-01-11
 
+# This script: expoqr
+#
 # Examines the whole screen for a QR code (the one in the browser!)
 # Gets the URL from the QR code,
 # Converts it to an Expo app URL,
@@ -13,18 +17,13 @@
 #   exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz
 # Expo app wants:
 #   exp://expo.io/@snack/Skf4bLBNz
-
-# Expo scripts for working with Expo snack URLs and QR Codes
-# for use with the emulator.
-
+#
 # This script depends on:
 #  ImageMagick's "import" commandline utility (to capture the desktop)
 #   You may change the "import -window root ..." command to your own screen
 #   capture utility
 #  zbar-tools' "zbarimg" utility
 #   If you have another utility to scan an image for QR codes, be my guest
-
-# This script: expoqr
 #
 # NOTE: Make sure you have clipboard sharing enabled in
 #       The Emulator -> ... -> Settings -> Clipboard sharing
