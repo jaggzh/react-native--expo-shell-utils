@@ -53,12 +53,15 @@ If found, the QR Code from Expo's snacks will contain, for example:<br />
 Then, then clipboard will have what the Expo app craves:<br />
   `exp://expo.io/@snack/Skf4bLBNz` will be placed in the clipboard (currently uses xsel -ib, so it only works in un\*x/X11)
 
-This script depends on:<br />
+### This script depends on:<br />
 * ImageMagick's "`import`" commandline utility (to capture the desktop)<br />
   *You may change the "`import -window root ...`" command to your own screen*
   capture utility
 * zbar-tools' "`zbarimg`" utility<br />
   *If you have another utility to scan an image for QR codes, be my guest.*
+
+### To install those in Debian/Ubuntu:
+* sudo apt install imagemagick zbar-tools
 
 NOTE: Make sure you have clipboard sharing enabled in
       The Emulator -> ... -> Settings -> Clipboard sharing
