@@ -3,7 +3,7 @@ React Native/Expo: A collection of command line scripts for working with QR code
 by jaggz.h who is at gmail.co<br />
 2018-01-11
 
-## Currently two scripts are included...
+## Currently two scripts are included:
 
 ---
 
@@ -44,7 +44,7 @@ If found, the QR Code from Expo's snacks will contain, for example:<br />
 `expoqr` places in the clipboard what Expo app craves:<br />
   `exp://expo.io/@snack/Skf4bLBNz`
 
-This script depends on...<br />
+This script depends on:<br />
  ImageMagick's "import" commandline utility (to capture the desktop)<br />
   You may change the "import -window root ..." command to your own screen
   capture utility<br />
