@@ -1,10 +1,9 @@
 # react-native--expo-shell-utils
-React Native/Expo: A collection of command line scripts for working with QR codes, the browser, clipboard, emulator, etc.
-
-by jaggz.h who is at gmail.com
+React Native/Expo: A collection of command line scripts for working with QR codes, the browser, clipboard, emulator, etc.<br />
+by jaggz.h who is at gmail.co<br />
 2018-01-11
 
-Currently two scripts are included:
+## Currently two scripts are included...
 ---
 # expo
 Converts Expo Snack web URLS (https://) to the exp:// format
@@ -36,7 +35,7 @@ If found, the QR Code will contain, for example:<br />
 Expo app wants:<br />
   `exp://expo.io/@snack/Skf4bLBNz`
 
-This script depends on:<br />
+This script depends on...<br />
  ImageMagick's "import" commandline utility (to capture the desktop)<br />
   You may change the "import -window root ..." command to your own screen
   capture utility<br />
