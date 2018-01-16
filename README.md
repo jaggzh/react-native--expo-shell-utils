@@ -1,12 +1,11 @@
 # `react-native--expo-shell-utils`
 
-## React Native/Expo command line scripts:
+## React Native/Expo command line scripts
 
 **A collection of command line scripts for working with
-[Expo Snacks'](https://snack.expo.io/)
+[Expo Snacks'](https://snack.expo.io/):<br />
 QR codes, the browser, clipboard, emulator, etc.**<br />
-by jaggz.h who is at gmail.co<br />
-2018-01-11
+by jaggz.h who is at gmail.com. Script version date: 2018-01-16
 
 References:
 1. React Native: https://facebook.github.io/react-native/
