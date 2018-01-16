@@ -19,7 +19,7 @@ NOTE: Make sure you have clipboard sharing enabled in
 Example: `expo https://snack.expo.io/HJVEgOugW`<br />
 Produces: `exp://expo.io/@snack/H1cnedhBW`
 
-Example registered user input: (This doesn't work yet)<br />
+Example registered user input... (This doesn't work yet)<br />
  `https://snack.expo.io/@jaggzh/slider-example`<br />
 Produces: `exp://expo.io/@jaggzh/slider-example`
 ---
