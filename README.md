@@ -14,12 +14,10 @@ which allows the Expo client, in the emulator, to pick it up.
 Expo scripts for working with Expo snack URLs and QR Codes
 for use with the emulator.
 
-This script: expo
-
 NOTE: Make sure you have clipboard sharing enabled in
       The Emulator -> ... -> Settings -> Clipboard sharing
 
-Example: 'expo https://snack.expo.io/HJVEgOugW`
+Example: `expo https://snack.expo.io/HJVEgOugW`<br />
 Produces: `exp://expo.io/@snack/H1cnedhBW`
 
 Example registered user input: (This doesn't work yet)<br />
