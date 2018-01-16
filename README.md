@@ -24,8 +24,8 @@ which allows the Expo client, in the emulator, to pick it up.
 Expo scripts for working with Expo snack URLs and QR Codes
 for use with the emulator.
 
-NOTE: Make sure you have clipboard sharing enabled in
-      The Emulator -> ... -> Settings -> Clipboard sharing
+*NOTE: Make sure you have clipboard sharing enabled in
+      The Emulator -> ... -> Settings -> Clipboard sharing*
 
 Example: `expo https://snack.expo.io/HJVEgOugW`<br />
 Produces: `exp://expo.io/@snack/H1cnedhBW`
@@ -46,7 +46,9 @@ And copies it to the clipboard for Expo, in the emulator,</br />
 ### To run:
 
 1. Have QR code visible on screen (in browser probably)
-2. Run: `expoqr`
+2. *Make sure you have clipboard sharing enabled in
+      The Emulator -> ... -> Settings -> Clipboard sharing*
+3. Run: `expoqr`
 
 If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
@@ -62,7 +64,4 @@ Then, then clipboard will have what the Expo app craves:<br />
 
 ### To install those in Debian/Ubuntu:
 * sudo apt install imagemagick zbar-tools
-
-NOTE: Make sure you have clipboard sharing enabled in
-      The Emulator -> ... -> Settings -> Clipboard sharing
 
