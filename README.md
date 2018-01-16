@@ -19,30 +19,31 @@ This script: expo
 NOTE: Make sure you have clipboard sharing enabled in
       The Emulator -> ... -> Settings -> Clipboard sharing
 
-Example input: https://snack.expo.io/HJVEgOugW
-     Produces: exp://expo.io/@snack/H1cnedhBW
-Example registered user input: (This doesn't work yet)
-               https://snack.expo.io/@jaggzh/slider-example
-     Produces: exp://expo.io/@jaggzh/slider-example
+Example: 'expo https://snack.expo.io/HJVEgOugW`
+Produces: `exp://expo.io/@snack/H1cnedhBW`
+
+Example registered user input: (This doesn't work yet)<br />
+ `https://snack.expo.io/@jaggzh/slider-example`<br />
+Produces: `exp://expo.io/@jaggzh/slider-example`
 ---
 # expoqr
-Examines the whole screen for a QR code (the one in the browser!)
-Gets the URL from the QR code,
-Converts it to an Expo app URL,
-And copies it to the clipboard for Expo, in the emulator,
+Examines the whole screen for a QR code (the one in the browser!)<br />
+Gets the URL from the QR code,<br />
+Converts it to an Expo app URL,<br />
+And copies it to the clipboard for Expo, in the emulator,<br />
  to pick up in its main screen.
 
-If found, the QR Code will contain, for example:
-  exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz
-Expo app wants:
-  exp://expo.io/@snack/Skf4bLBNz
+If found, the QR Code will contain, for example:<br />
+  `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`
+Expo app wants:<br />
+  `exp://expo.io/@snack/Skf4bLBNz`
 
-This script depends on:
- ImageMagick's "import" commandline utility (to capture the desktop)
+This script depends on:<br />
+ ImageMagick's "import" commandline utility (to capture the desktop)<br />
   You may change the "import -window root ..." command to your own screen
-  capture utility
- zbar-tools' "zbarimg" utility
-  If you have another utility to scan an image for QR codes, be my guest
+  capture utility<br />
+ zbar-tools' "zbarimg" utility<br />
+  If you have another utility to scan an image for QR codes, be my guest.
 
 NOTE: Make sure you have clipboard sharing enabled in
       The Emulator -> ... -> Settings -> Clipboard sharing
