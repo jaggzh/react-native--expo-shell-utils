@@ -1,8 +1,17 @@
 # `react-native--expo-shell-utils`
 
-React Native/Expo: A collection of command line scripts for working with QR codes, the browser, clipboard, emulator, etc.<br />
+## React Native/Expo command line scripts:
+
+**A collection of command line scripts for working with
+[Expo Snacks'](https://snack.expo.io/)
+QR codes, the browser, clipboard, emulator, etc.**<br />
 by jaggz.h who is at gmail.co<br />
 2018-01-11
+
+References:
+1. React Native: https://facebook.github.io/react-native/
+2. Expo: https://expo.io/
+3. Expo Snacks: https://snack.expo.io/
 
 ## Currently two scripts are included:
 
@@ -42,8 +51,7 @@ And copies it to the clipboard for Expo, in the emulator,</br />
 
 If found, the QR Code from Expo's snacks will contain, for example:<br />
   `exp://expo.io/@snack/Skf4bLBNz+BJDE-ISNz`<br />
-Then:<br />
-`expoqr` has what Expo app craves::<br />
+Then, then clipboard will have what the Expo app craves:<br />
   `exp://expo.io/@snack/Skf4bLBNz` will be placed in the clipboard (currently uses xsel -ib, so it only works in un\*x/X11)
 
 This script depends on:<br />
